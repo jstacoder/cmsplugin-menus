@@ -1,5 +1,5 @@
 import os
-from setuptools import setup, find_packages
+from setuptools import setup, find_packages, findall
 
 # Utility function to read the README file.
 # Used for the long_description.  It's nice, because now 1) we have a top level
@@ -30,4 +30,5 @@ setup(
     include_package_data=True,
     zip_safe=False,
     install_requires=['setuptools'],
+    package_data={'':findall('cmsplugin_menus')},
 )
